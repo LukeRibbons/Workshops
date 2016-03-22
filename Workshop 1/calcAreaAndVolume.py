@@ -1,10 +1,14 @@
 print('Area calculator')
 
-width = float(input('enter width:'))
-height = float(input('enter height:'))
 depth = float(input('enter depth:'))
 
-area = width * height
+
+def calculate_area():
+    width = float(input('enter width:'))
+    height = float(input('enter height:'))
+    rectangle_area = width * height
+    return rectangle_area
+area = calculate_area()
 volume = area * depth
 
 print('Area:', area, 'Volume:', volume)
