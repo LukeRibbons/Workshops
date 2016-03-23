@@ -18,7 +18,7 @@ def get_number(lower, upper):
         return lower
     else:
         entered_number = input("Enter a number ({}-{}):".format(lower, upper))
-        while lower >= int(entered_number) >= upper or not entered_number.isdecimal():
+        while not entered_number.isdecimal()or lower >= int(entered_number) >= upper:
             print("Please enter a valid number")
             entered_number = input("Enter a number ({}-{}):".format(lower, upper))
         return entered_number
