@@ -1,13 +1,14 @@
 print('Temperature Conversion program')
 
+celsius_value = float(input('Enter temperature in celsius:'))
+kelvin_value = celsius_value + 273.15
 
-def convert_celsius_to_fahrenheit():
-    celsius_value = float(input('Enter temperature in celsius:'))
+
+def convert_celsius_to_fahrenheit(celsius_value):
     fahrenheit_value = celsius_value * 9 / 5 + 32
-    kelvin_value = celsius_value + 273.15
-    return celsius_value, fahrenheit_value, kelvin_value
+    return fahrenheit_value
 
-temperature_tuple = convert_celsius_to_fahrenheit()
-print('celsius value:', temperature_tuple[0])
-print('fahrenheit value:', temperature_tuple[1])
-print('kelvin value:', temperature_tuple[2])
+fahrenheit_value = convert_celsius_to_fahrenheit(celsius_value)
+print('celsius value:', celsius_value)
+print('fahrenheit value:', fahrenheit_value)
+print('kelvin value:', kelvin_value)
