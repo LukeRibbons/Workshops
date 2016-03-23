@@ -14,11 +14,14 @@ for i in range(10, 120, 11):
 
 
 def get_number(lower, upper):
-    entered_number = input("Enter a number ({}-{}):".format(lower, upper))
-    while lower >= int(entered_number) >= upper or not entered_number.isdecimal():
-        print("Please enter a valid number")
+    if lower >= upper:
+        return lower
+    else:
         entered_number = input("Enter a number ({}-{}):".format(lower, upper))
-    return entered_number
+        while lower >= int(entered_number) >= upper or not entered_number.isdecimal():
+            print("Please enter a valid number")
+            entered_number = input("Enter a number ({}-{}):".format(lower, upper))
+        return entered_number
 number_entered = int(get_number(LOWER, UPPER))
 
 print("{:<3} {}".format(number_entered, chr(number_entered)))
