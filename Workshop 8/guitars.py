@@ -9,7 +9,7 @@ while name != "":
         year = int(input("Year: "))
         cost = float(input("Cost: "))
         guitars.append(Guitar(name, year, cost))
-if not guitars == []:
+if guitars:
     print("These are my guitars")
     for x in range(len(guitars)):
         if guitars[x].is_vintage():
