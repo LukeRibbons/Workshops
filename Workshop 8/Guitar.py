@@ -3,7 +3,7 @@ class Guitar:
         """ initialize a Guitar instance
         name: string, name of the guitar
         year: integer, year made
-        cost: float, cost of guitar """
+        cost: float, cost of guitar  """
         self.name = name
         self.year = year
         self.cost = cost
